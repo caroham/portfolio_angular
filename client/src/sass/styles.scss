@@ -1,0 +1,38 @@
+@import './variables';
+@import './mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(124, 110, 110);
+}
+
+h3 {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}

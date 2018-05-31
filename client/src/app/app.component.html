@@ -1,0 +1,9 @@
+  <div id="nav" [@navExpandTrigger]="navState" (click)="toggleNavState()">
+    <h1 id="name-title">Carolyn Hampe</h1>
+    <div id="about" *ngIf="navExpanded" [@aboutVisibleTrigger]="'in'">
+      <p>Description</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis nobis saepe illum voluptate sit officiis animi natus molestiae facere ratione, iure quaerat maiores atque iusto quod quae consequuntur facilis!</p>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+
