@@ -1,0 +1,25 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+#footer {
+    height: 80px;
+    background-color: $light-gray-2;
+    // border-top: solid 1px #000;
+    // bottom: 0;
+    margin: auto auto 0 auto;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.footer-email, .footer-desc {
+    padding-bottom: 8px;
+}
+
+.footer-email {
+    font-size: 14px;
+}
+
+.footer-desc {
+    font-size: 12px;
+    font-family: 'PT Serif', serif;
+}

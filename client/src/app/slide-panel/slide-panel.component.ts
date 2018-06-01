@@ -6,7 +6,9 @@ import {
   state,
   style,
   transition,
-  animate
+  animate,
+  HostListener,
+  NgModule
 } from '@angular/core';
 import {query, animateChild} from '@angular/animations';
 import {Subscription} from "rxjs/Rx";
@@ -63,15 +65,33 @@ import {Subscription} from "rxjs/Rx";
 export class SlidePanelComponent implements OnInit {
   expanded = true;
   expandedState = "expanded";
+  mobile = false;
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if(window.innerWidth < 480){
+      this.mobile = true;
+    }
+    if(window.innerWidth > 480){
+      this.mobile = false;
+    }
+    console.log("=====window changed!!! this.mobile: ", this.mobile, window.innerWidth);
+  }
 
   constructor() { }
 
   ngOnInit() {
+    if(window.innerWidth < 480){
+      this.mobile = true;
+    }
   }
 
   toggleExpandedState() {
-    this.expandedState = this.expanded ? 'collapsed' : 'expanded';
-    this.expanded = !this.expanded;
+    if(!this.mobile){
+      this.expandedState = this.expanded ? 'collapsed' : 'expanded';
+      this.expanded = !this.expanded;
+    }
   }
 
 }

@@ -1,7 +1,7 @@
 <div id="container-panels">
   <div id="panel-dev" [@panelExpandTrigger]="expandedState">
-    <div class="tab-dev" (click)="toggleExpandedState()">
-      <h2>Software Development</h2>
+    <div class="tab-dev tab" (click)="toggleExpandedState()">
+      <h2>Code</h2>
     </div>
     <div class="container-dev" *ngIf="expanded" [@visibleTrigger]="'visible'">
       <div class="proj-container-home">
@@ -22,8 +22,8 @@
     </div>
   </div>
   <div id="panel-design">
-    <div class="tab-design" (click)="toggleExpandedState()">
-        <h2>Graphic Design</h2>
+    <div class="tab-design tab" (click)="toggleExpandedState()">
+        <h2>Design</h2>
     </div>
     <div class="container-design">
       <div class="proj-container-home">

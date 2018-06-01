@@ -1,0 +1,23 @@
+<div id="nav" [@navExpandTrigger]="navState">
+  <h1 id="name-title" [routerLink]="['/']">Carolyn Hampe</h1>
+  <a><h1 id="btn-about" (click)="toggleNavState()">About</h1></a>
+  <div id="about" *ngIf="navExpanded" [@aboutVisibleTrigger]="'in'">
+    <div id="about-container">
+      <h1 class="about-lg about-main-desc">Software Developer with a background in Graphic Design.</h1>
+      <div class="timeline">
+        <h3 class="about-title">Timeline</h3>
+        <p class="about-desc">Born and raised in the SF Bay Area</p>
+        <h3 class="about-title">2014</h3>
+        <p class="about-desc">BFA in Graphic Design from MICA</p>
+        <h3 class="about-title">2014&ndash;2017</h3>
+        <p class="about-desc">Worked as Graphic Designer in NYC</p>
+        <h3 class="about-title">2017&ndash;2018</h3>
+        <p class="about-desc">Moved back to California to learn Software Development at Coding Dojo</p>
+      </div>
+      <div class="about-links">
+        <a><h1 class="about-lg link-bottom">Contact</h1></a>
+        <a href="https://github.com/caroham"><h1 class="about-lg link-bottom">Github</h1></a>
+      </div>
+    </div>
+  </div>
+</div>
