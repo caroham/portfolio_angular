@@ -3,7 +3,11 @@
   <a><h1 id="btn-about" (click)="toggleNavState()">About</h1></a>
   <div id="about" *ngIf="navExpanded" [@aboutVisibleTrigger]="'in'">
     <div id="about-container">
-      <h1 class="about-lg about-main-desc">Software Developer with a background in Graphic Design.</h1>
+      <h1 class="about-lg about-main-desc">Front-end Developer with a background in Graphic Design.</h1>
+      <div class="about-links">
+        <a><h1 class="about-lg link-bottom">Contact</h1></a>
+        <a href="https://github.com/caroham"><h1 class="about-lg link-bottom">Github</h1></a>
+      </div>
       <div class="timeline">
         <h3 class="about-title">Timeline</h3>
         <p class="about-desc">Born and raised in the SF Bay Area</p>
@@ -14,10 +18,7 @@
         <h3 class="about-title">2017&ndash;2018</h3>
         <p class="about-desc">Moved back to California to learn Software Development at Coding Dojo</p>
       </div>
-      <div class="about-links">
-        <a><h1 class="about-lg link-bottom">Contact</h1></a>
-        <a href="https://github.com/caroham"><h1 class="about-lg link-bottom">Github</h1></a>
-      </div>
+
     </div>
   </div>
 </div>

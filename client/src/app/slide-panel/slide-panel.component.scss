@@ -1,11 +1,6 @@
 @import '~sass/variables';
 @import '~sass/mixins';
 
-#container-panels {
-    // width: 100%;
-    // display: grid;
-}
-
 #panel-dev {
     background-color: white;
 }
@@ -17,18 +12,51 @@
 .img-home {
     background-color: lightgray;
     height: 200px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .proj-title-home {
-    padding-bottom: 8px;
+    font-size: 1.25rem;
+    padding-bottom: 10px;
 }
 
 .proj-desc-home {
+    line-height: 1.5rem;
+}
+
+.proj-tech-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding-bottom: 12px;
+}
+
+.proj-link, .proj-date {
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.proj-date {
+    padding-left: 20px;
+}
+
+.proj-desc {
     padding-bottom: 48px;
 }
 
+.proj-credit-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
 
+.proj-credits {
+    font-size: 0.8rem;
+    padding-bottom: 4px;
+}
 
 @media only screen and (max-width: 480px){
     #panel-dev, #panel-design {
@@ -39,6 +67,9 @@
         padding: 30px 0 30px 0;
     }
 
+    .proj-desc-home {
+        padding-bottom: 20px;
+    }
 }
 
 @media only screen and (min-width: 481px){
@@ -54,7 +85,7 @@
         z-index: 2;
         display: grid;
         grid-template-rows: 30px auto;
-        grid-template-columns: 30px 1fr 16px 1fr 120px 60px;
+        grid-template-columns: 30px 1fr 90px 60px;
         @include box-shadow();
     }
 
@@ -63,7 +94,7 @@
         z-index: 1;
         display: grid;
         grid-template-rows: 30px auto;
-        grid-template-columns: 60px 30px 1fr 16px 1fr 120px 60px;
+        grid-template-columns: 60px 30px 1fr 120px 60px;
     }
 
     .tab-dev, .tab-design {
@@ -103,8 +134,33 @@
         grid-column-start: 3;
         grid-column-end: -3;
     }
+
+    .proj-desc-home {
+        padding-bottom: 24px;
+    }
+}
+
+@media only screen and (min-width: 780px){
+    .proj-desc {
+        display: grid;
+        grid-template-columns:3fr 20px 1fr;
+    }
+
+    .left-desc {
+        grid-column-start: 1;
+    }
+
+    .right-desc {
+        grid-column-start: 3;
+    }
+
+    .proj-desc-home {
+        padding-bottom: 48px;
+    }
 }
 
 @media only screen and (min-width: 1024px){
-
+    .proj-desc {
+        grid-template-columns:3fr 32px 1fr 10%;
+    }
 }

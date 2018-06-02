@@ -34,6 +34,19 @@ p {
   font-size: 1rem;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+li {
+  padding-bottom: 8px;
+}
+
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,
 body:not(.user-is-tabbing) select:focus,
