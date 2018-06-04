@@ -12,6 +12,7 @@ import {
 } from '@angular/core';
 import {query, animateChild} from '@angular/animations';
 import {Subscription} from "rxjs/Rx";
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-slide-panel',
@@ -72,18 +73,20 @@ export class SlidePanelComponent implements OnInit {
   onResize(event) {
     if(window.innerWidth < 480){
       this.mobile = true;
+      this._httpService.mobile=true;
     }
     if(window.innerWidth > 480){
       this.mobile = false;
+      this._httpService.mobile=false;
     }
-    console.log("=====window changed!!! this.mobile: ", this.mobile, window.innerWidth);
   }
 
-  constructor() { }
+  constructor(private _httpService: HttpService) { }
 
   ngOnInit() {
     if(window.innerWidth < 480){
       this.mobile = true;
+      this._httpService.mobile=true;
     }
   }
 

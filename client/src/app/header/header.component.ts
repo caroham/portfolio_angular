@@ -49,6 +49,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class HeaderComponent implements OnInit {   
   navState = "navCollapsed";
   navExpanded = false;
+  mobile=false;
 
   constructor(
     private _httpService: HttpService,
@@ -60,6 +61,9 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleNavState(){
+    if(this._httpService.mobile) {
+      this.mobile = true;
+    }
     this.navState = this.navExpanded ? 'navCollapsed' : 'navExpanded';
     this.navExpanded = !this.navExpanded;
   }
