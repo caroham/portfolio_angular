@@ -4,20 +4,17 @@
   <div id="about" *ngIf="navExpanded" [@aboutVisibleTrigger]="'in'">
     <div id="about-container">
       <h1 class="about-lg about-main-desc">Software Developer with a background in Graphic Design. Interested in art, language, nature, and the ethics around technology.</h1>
-      <!-- <a href="mailto:carolyn.hampe@gmail.com" target="_blank"><h1 class="about-lg link-lg link-contact">Contact</h1></a>
-      <a href="https://github.com/caroham" target="_blank"><h1 class="about-lg link-lg link-github">Github</h1></a> -->
-      <div class="timeline">
-        <h3 class="about-title">Timeline</h3>
+      <h3 class="about-title-timeline" *ngIf="!mobile">Timeline</h3>
+      <div class="timeline"  *ngIf="!mobile">
         <h3 class="about-sub-title">2014</h3>
         <p class="about-desc">BFA in Graphic Design from <a href="https://www.mica.edu/" target="_blank">MICA</a></p>
         <h3 class="about-sub-title">2014&ndash;2017</h3>
         <p class="about-desc">Worked as Graphic Designer in NYC</p>
         <h3 class="about-sub-title">2018</h3>
         <p class="about-desc">Learning to code at <a href="https://www.codingdojo.com/" target="_blank">Coding Dojo</a> in San Jose, CA</p>
-        <a href="mailto:carolyn.hampe@gmail.com" target="_blank"><h1 class="about-lg link-lg link-contact">Contact</h1></a>
       </div>
+      <h3 class="about-title about-title-skills">Skills</h3>
       <div class="about-tech">
-        <h3 class="about-title">Skills</h3>
         <h3 class="about-sub-title">Languages</h3>
         <ul class="about-desc">
           <li>JavaScript</li>
@@ -47,6 +44,8 @@
           <li>Photoshop</li>
         </ul>
       </div>
+      <a href="mailto:carolyn.hampe@gmail.com" class="about-lg link-lg link-contact" target="_blank"><h1>Contact</h1></a>
+      <a href="https://github.com/caroham" class="about-lg link-lg link-github" target="_blank"><h1>Github</h1></a>
       <a id="close-btn" *ngIf="this.mobile" (click)="toggleNavState()">close</a>
     </div>
   </div>
