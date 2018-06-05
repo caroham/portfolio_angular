@@ -10,7 +10,7 @@
           <div class="left-desc">
             <h3 class="proj-title-home">Communal Canvas</h3>
             <div class="proj-subtitles">
-              <a class="proj-link" href="https://github.com/caroham/communal_canvas"><p>github</p></a>
+              <a class="proj-link" href="https://github.com/caroham/communal_canvas" target="_blank"><p>github</p></a>
               <p class="proj-date">2018 (in progress)</p>
             </div>
             <p class="proj-desc-home">A website where users can draw with their cursors. Drawings are passed down so that on first load the user sees a portion of what was last drawn. Use of Socket.io allows users to draw together in realtime if there are multiple users on the site at once.</p>
@@ -33,7 +33,7 @@
           <div class="left-desc">
             <h3 class="proj-title-home">Mapped News</h3>
             <div class="proj-subtitles">
-              <a class="proj-link" href="https://github.com/caroham/news_map"><p>github</p></a>
+              <a class="proj-link" href="https://github.com/caroham/news_map" target="_blank"><p>github</p></a>
               <p class="proj-date">2018 (in progress)</p>
             </div>
             <p class="proj-desc-home">An iOS app that plots the top 10 World News Stories on a map, using API's from The New York Times and Google, allowing for a different way to interact with and process the news</p>
@@ -55,7 +55,7 @@
           <div class="left-desc">
             <h3 class="proj-title-home">Write Write Cross</h3>
             <div class="proj-subtitles">
-              <a class="proj-link" href="https://github.com/caroham/write_write_cross_game"><p>github</p></a>
+              <a class="proj-link" href="https://github.com/caroham/write_write_cross_game" target="_blank"><p>github</p></a>
               <p class="proj-date">2018 (in progress)</p>
             </div>
             <p class="proj-desc-home">A collaborative writing game where everyone loses (just kidding). Users take turns writing and crossing out words. For every two words written, one must be crossed out. A frustrating but interesting writing experience.</p>
@@ -79,7 +79,7 @@
     <div class="container-design">
       <div class="proj-container-home">
           <img class="img-home-mult mobile-tall" src="./assets/signal_1_crop.gif" alt="Signal gif 1">
-          <img class="img-home-mult mobile-tall" src="./assets/signal_loading_crop.gif" alt="Signal gif 2">
+          <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/signal_loading_crop.gif" alt="Signal gif 2">
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Dolphin/Signal App Startup</h3>
@@ -116,12 +116,12 @@
       </div>
       <div class="proj-container-home">
         <img class="img-home-mult mobile-tall" src="./assets/amnh_mapzoom_crop.gif" alt="Explorer gif 1">
-        <img class="img-home-mult mobile-tall" src="./assets/amnh_scroll_crop.gif" alt="Explorer gif 2">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/amnh_scroll_crop.gif" alt="Explorer gif 2">
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">AMNH Explorer App</h3>
             <div class="proj-subtitles">
-                <a class="proj-link" href="https://www.amnh.org/apps/explorer"><p>website</p></a>
+                <a class="proj-link" href="https://www.amnh.org/apps/explorer" target="_blank"><p>website</p></a>
                 <p class="proj-date">2015</p>
             </div>
             <p class="proj-desc-home">A mobile app for the American Museum of Natural History. Users select their interests then get a curated list of exhibits to visit. When users neared an exhibit on their list, they would get a push notification. There was also an educational AR game in the app in which users would get hints to visit certain dioramas to collect badges.</p>
@@ -162,14 +162,14 @@
       </div>
       <div class="proj-container-home">
         <img class="img-home-mult mobile-tall img-pad" src="./assets/thesis_zoomed-out_color.jpg" alt="thesis 1">
-        <img class="img-home-mult mobile-tall" src="./assets/thesis_detail_640_crop.jpg" alt="thesis 2">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/thesis_detail_640_crop.jpg" alt="thesis 2">
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">The Language of Language</h3>
             <div class="proj-subtitles">
                 <p class="proj-link">2014</p>
             </div>
-            <p class="proj-desc-home">An installation for my Senior Thesis project.</p>
+            <p class="proj-desc-home">An installation for my Senior Thesis project exploring linguistic relativity, or the relationship between a person's native language and how that shapes the way that they percieve the world.</p>
           </div>
           <div class="right-desc">
             <ul class="proj-tech">

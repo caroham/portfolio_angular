@@ -74,6 +74,8 @@ export class SlidePanelComponent implements OnInit {
     if(window.innerWidth < 480){
       this.mobile = true;
       this._httpService.mobile=true;
+      this.expandedState = 'expanded';
+      this.expanded = true;
     }
     if(window.innerWidth > 480){
       this.mobile = false;

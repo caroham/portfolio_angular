@@ -7,7 +7,8 @@ import {
   state,
   style,
   transition,
-  animate
+  animate,
+  HostListener
 } from '@angular/core';
 import {query, animateChild} from '@angular/animations';
 import {Subscription} from "rxjs/Rx";
@@ -51,6 +52,18 @@ export class HeaderComponent implements OnInit {
   navExpanded = false;
   mobile=false;
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if(window.innerWidth < 480){
+      this.mobile = true;
+      this._httpService.mobile=true;
+    }
+    if(window.innerWidth > 480){
+      this.mobile = false;
+      this._httpService.mobile=false;
+    }
+  }
+
   constructor(
     private _httpService: HttpService,
     private _route: ActivatedRoute,
@@ -63,6 +76,8 @@ export class HeaderComponent implements OnInit {
   toggleNavState(){
     if(this._httpService.mobile) {
       this.mobile = true;
+    } else {
+      this.mobile=false;
     }
     this.navState = this.navExpanded ? 'navCollapsed' : 'navExpanded';
     this.navExpanded = !this.navExpanded;
