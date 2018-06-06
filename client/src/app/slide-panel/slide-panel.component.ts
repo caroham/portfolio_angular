@@ -8,7 +8,8 @@ import {
   transition,
   animate,
   HostListener,
-  NgModule
+  NgModule,
+  HostBinding
 } from '@angular/core';
 import {query, animateChild} from '@angular/animations';
 import {Subscription} from "rxjs/Rx";
@@ -32,34 +33,16 @@ import { HttpService } from '../http.service';
       transition('expanded => collapsed', animate('400ms 200ms ease-out')),
     ]),
 
-    // trigger('panelExpandTrigger', [
-    //   transition('collapsed => expanded', [
-    //     query('panel-dev', [
-    //       style({}),
-    //       animate()
-    //     ])
-    //   ])
-    // ]),
     trigger('visibleTrigger', [
       state('expanded', style({transform: 'translateX(0)'})),
       state('collapsed', style({transform: 'translateX(-95%)'})),
       transition('collapsed => expanded', animate('400ms 200ms ease-in')),
       transition('expanded => collapsed', animate('400ms 200ms ease-out')),
 
-
       // state('visible', style({ opacity: '1', transform: 'translateX(0)' })),
       // transition('void => *', [style({ opacity: '0', transform: 'translateX(-1%)' }), animate('100ms 100ms')]),
       // transition('* => void', [animate('100ms', style({ opacity: '0' }))]),
 
-
-      // transition('collapsed => expanded', [
-      //   style({ opacity: 0 }),
-      //   animate(500, style({ opacity: 1 }))
-      // ]),
-      // transition('expanded => collapsed', [
-      //   style({ opacity: 1 }),
-      //   animate(500, style({ opacity: 0 }))
-      // ])
     ])
   ]
 })
@@ -67,6 +50,12 @@ export class SlidePanelComponent implements OnInit {
   expanded = true;
   expandedState = "expanded";
   mobile = false;
+
+  signal_main=false;
+  signal_load=false;
+
+  amnh_scroll=false;
+  amnh_zoom=false;
 
 
   @HostListener('window:resize', ['$event'])
@@ -83,6 +72,7 @@ export class SlidePanelComponent implements OnInit {
     }
   }
 
+
   constructor(private _httpService: HttpService) { }
 
   ngOnInit() {
@@ -90,6 +80,7 @@ export class SlidePanelComponent implements OnInit {
       this.mobile = true;
       this._httpService.mobile=true;
     }
+
   }
 
   toggleExpandedState() {
@@ -97,6 +88,7 @@ export class SlidePanelComponent implements OnInit {
       this.expandedState = this.expanded ? 'collapsed' : 'expanded';
       this.expanded = !this.expanded;
     }
+
   }
 
 }

@@ -1,6 +1,11 @@
 <div id="nav" [@navExpandTrigger]="navState">
   <h1 id="name-title">Carolyn Hampe</h1>
-  <a><h1 id="btn-about" (click)="toggleNavState()">About</h1></a>
+  <a id="btn-about" (click)="toggleNavState()">
+    <div id="info">
+      <h3 class="letter-icon">i</h3>
+    </div>
+    <img id="diamond" src="./assets/app_icon_diamond-06.svg">
+  </a>
   <div id="about" *ngIf="navExpanded" [@aboutVisibleTrigger]="'in'">
     <div id="about-container">
       <h1 class="about-lg about-main-desc">Software Developer with a background in Graphic Design. Interested in art, language, nature, and the ethics around technology.</h1>

@@ -5,7 +5,10 @@
     </div>
     <div class="container-dev" *ngIf="expanded" [@visibleTrigger]="'visible'">
       <div class="proj-container-home">
-        <img class="img-home-single" src="./assets/cc_3_crop.gif" alt="Communal Canvas gif">
+        <!-- <img class="img-home-single" src="./assets/cc_3_crop.gif" alt="Communal Canvas gif"> -->
+        <video loop muted class="img-home-single home-vid" (click)="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/cc_3_crop.mp4">
+        </video>          
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Communal Canvas</h3>
@@ -28,7 +31,11 @@
         </div>
       </div>
       <div class="proj-container-home">
-        <img class="img-home-single mobile-wide" src="./assets/map_mockup_crop.gif" alt="Mapped News gif">
+        <!-- <img class="img-home-single mobile-wide" src="./assets/map_mockup_crop.gif" alt="Mapped News gif"> -->
+        <video loop muted class="img-home-single home-vid" (click)="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/map_mockup_crop.mp4">
+          Your browser does not support the video tag.
+        </video>  
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Mapped News</h3>
@@ -50,7 +57,10 @@
         </div>
       </div>
       <div class="proj-container-home">
-        <div class="img-home"></div>
+        <!-- <img class="img-home-single mobile-wide" src="./assets/wwc_1.gif" alt="Write Write Cross gif"> -->
+        <video loop muted class="img-home-single home-vid" (click)="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/wwc_1.mp4">
+        </video>
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Write Write Cross</h3>
@@ -78,8 +88,10 @@
     </div>
     <div class="container-design">
       <div class="proj-container-home">
-          <img class="img-home-mult mobile-tall" src="./assets/signal_1_crop.gif" alt="Signal gif 1">
-          <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/signal_loading_crop.gif" alt="Signal gif 2">
+        <img class="img-home-mult mobile-tall" *ngIf="!signal_main" src="./assets/signal_1_still.png" alt="Explorer gif 2" (click)="signal_main = !signal_main">
+        <img class="img-home-mult mobile-tall" *ngIf="signal_main" src="./assets/signal_1_crop.gif" alt="Explorer gif 2" (click)="signal_main = !signal_main">
+        <img class="img-home-mult mobile-tall" *ngIf="!signal_load" src="./assets/signal_loading_still.png" alt="Explorer gif 2" (click)="signal_load = !signal_load">
+        <img class="img-home-mult mobile-tall" *ngIf="signal_load" src="./assets/signal_loading_crop.gif" alt="Explorer gif 2" (click)="signal_load = !signal_load">
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Dolphin/Signal App Startup</h3>
@@ -115,8 +127,10 @@
         </div>
       </div>
       <div class="proj-container-home">
-        <img class="img-home-mult mobile-tall" src="./assets/amnh_mapzoom_crop.gif" alt="Explorer gif 1">
-        <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/amnh_scroll_crop.gif" alt="Explorer gif 2">
+          <img class="img-home-mult mobile-tall" *ngIf="!amnh_zoom" src="./assets/amnh_mapzoom_still.png" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
+        <img class="img-home-mult mobile-tall" *ngIf="amnh_zoom" src="./assets/amnh_mapzoom_crop.gif" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile && !amnh_scroll" src="./assets/amnh_scroll_still.png" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile && amnh_scroll" src="./assets/amnh_scroll_short.gif" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">AMNH Explorer App</h3>

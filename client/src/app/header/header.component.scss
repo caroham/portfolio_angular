@@ -15,19 +15,45 @@
     padding-left: 30px;
     color: #000;
     font-size: 1.5rem;
+    padding-top: 24px;
 }
 
 #name-title, #btn-about {
     cursor: pointer;
-    padding-top: 24px;
     align-items: baseline;
     display: inline-block;
 }
 
 #btn-about {
-    margin-right: 30px;
+    margin-right: 16px;
     float: right;
 }
+
+#info {
+    z-index: 2;
+    text-align: center;
+    padding-top: 20px;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+
+#diamond {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    margin-top: -40px;
+    position: absolute;
+}
+
+.letter-icon {
+    padding-top: 7px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
 
 .about-title {
     font-size: 14px;

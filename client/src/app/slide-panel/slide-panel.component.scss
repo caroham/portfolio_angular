@@ -7,6 +7,7 @@
 
 #panel-design {
     background-color: $light-gray;
+    // background-color: white;
 }
 
 ////// image sizing
@@ -21,12 +22,14 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 24px;
+    cursor: url(/assets/video_icon.png), auto;
 }
 
 .img-home-single {
     width: 100%;
     height: auto;
     margin-bottom: 24px;
+    cursor: url(/assets/video_icon.png), auto;
 }
 
 //////
