@@ -6,7 +6,7 @@
     <div class="container-dev" *ngIf="expanded" [@visibleTrigger]="'visible'">
       <div class="proj-container-home">
         <!-- <img class="img-home-single" src="./assets/cc_3_crop.gif" alt="Communal Canvas gif"> -->
-        <video loop muted class="img-home-single home-vid" (click)="this.paused ? this.play() : this.pause();">
+        <video loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/cc_3_crop.mp4">
         </video>          
         <div class="proj-desc">
@@ -32,7 +32,7 @@
       </div>
       <div class="proj-container-home">
         <!-- <img class="img-home-single mobile-wide" src="./assets/map_mockup_crop.gif" alt="Mapped News gif"> -->
-        <video loop muted class="img-home-single home-vid" (click)="this.paused ? this.play() : this.pause();">
+        <video loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/map_mockup_crop.mp4">
           Your browser does not support the video tag.
         </video>  
@@ -58,7 +58,7 @@
       </div>
       <div class="proj-container-home">
         <!-- <img class="img-home-single mobile-wide" src="./assets/wwc_1.gif" alt="Write Write Cross gif"> -->
-        <video loop muted class="img-home-single home-vid" (click)="this.paused ? this.play() : this.pause();">
+        <video loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/wwc_1.mp4">
         </video>
         <div class="proj-desc">
