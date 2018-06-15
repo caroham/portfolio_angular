@@ -33,8 +33,8 @@
         </div>
       </div>
       <div class="proj-container-home">
-        <!-- <img class="img-home-single mobile-wide" src="./assets/map_mockup_crop.gif" alt="Mapped News gif"> -->
-        <video loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/map_still.png" alt="still of project video"/>  
+        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/map_mockup_crop.mp4">
           Your browser does not support the video tag.
         </video>  
@@ -59,8 +59,8 @@
         </div>
       </div>
       <div class="proj-container-home">
-        <!-- <img class="img-home-single mobile-wide" src="./assets/wwc_1.gif" alt="Write Write Cross gif"> -->
-        <video loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/wwc_still.png" alt="still of project video"/>  
+        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/wwc_1.mp4">
           Your browser does not support the video tag.
         </video>
