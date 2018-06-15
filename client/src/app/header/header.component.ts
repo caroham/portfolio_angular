@@ -13,7 +13,7 @@ import {
 import {query, animateChild} from '@angular/animations';
 import {Subscription} from "rxjs/Rx";
 
-import { ActivatedRoute, Params, Router } from '@angular/router';
+// import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -66,8 +66,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private _httpService: HttpService,
-    private _route: ActivatedRoute,
-    private _router: Router
+    // private _route: ActivatedRoute,
+    // private _router: Router
   ) { }
 
   ngOnInit() {

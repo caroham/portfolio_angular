@@ -18,5 +18,8 @@
     "express": "^4.16.3",
     "hoek": "^5.0.3",
     "tslib": "^1.9.2"
+  },
+  "devDependencies": {
+    "@angular/cli": "^6.0.8"
   }
 }
