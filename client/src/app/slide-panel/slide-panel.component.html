@@ -6,11 +6,11 @@
     <div class="container-dev" *ngIf="expanded" [@visibleTrigger]="'visible'">
       <div class="proj-container-home">
         <!-- <img class="img-home-single" src="./assets/cc_3_crop.gif" alt="Communal Canvas gif"> -->
+        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/cc_still.png" alt="still of project video"/>  
         <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/cc_3_crop.mp4">
           Your browser does not support the video tag.
-        </video>    
-        <img class="img-home-single home-vid" *ngIf="mobile" src="./assets/cc_still.png" alt="still of project video"/>      
+        </video>        
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Communal Canvas</h3>
