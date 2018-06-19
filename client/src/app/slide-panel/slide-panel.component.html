@@ -1,0 +1,203 @@
+<div id="container-panels">
+  <div id="panel-dev" [@panelExpandTrigger]="expandedState">
+    <div class="tab-dev tab" (click)="toggleExpandedState()">
+      <h2>Code</h2>
+    </div>
+    <div class="container-dev" *ngIf="expanded" [@visibleTrigger]="'visible'">
+      <div class="proj-container-home">
+        <!-- <img class="img-home-single" src="./assets/cc_3_crop.gif" alt="Communal Canvas gif"> -->
+        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/cc_still.png" alt="still of project video"/>  
+        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/cc_3_crop.mp4">
+          Your browser does not support the video tag.
+        </video>        
+        <div class="proj-desc">
+          <div class="left-desc">
+            <h3 class="proj-title-home">Communal Canvas</h3>
+            <div class="proj-subtitles">
+              <a class="proj-link" href="https://github.com/caroham/communal_canvas" target="_blank"><p>github</p></a>
+              <p class="proj-date">2018 (in progress)</p>
+            </div>
+            <p class="proj-desc-home">A website where users can draw with their cursors. Drawings are passed down so that on first load the user sees a portion of what was last drawn. Use of Socket.io allows users to draw together in realtime if there are multiple users on the site at once.</p>
+          </div>
+          <div class="right-desc">
+            <h3 class="proj-tech-title">Technologies</h3>
+            <ul class="proj-tech">
+              <li>AngularJS</li>
+              <li>Socket.io</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="proj-container-home">
+        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/map_still.png" alt="still of project video"/>  
+        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/map_mockup_crop.mp4">
+          Your browser does not support the video tag.
+        </video>  
+        <div class="proj-desc">
+          <div class="left-desc">
+            <h3 class="proj-title-home">Mapped News</h3>
+            <div class="proj-subtitles">
+              <a class="proj-link" href="https://github.com/caroham/news_map" target="_blank"><p>github</p></a>
+              <p class="proj-date">2018 (in progress)</p>
+            </div>
+            <p class="proj-desc-home">An iOS app that plots the top 10 World News Stories on a map, using API's from The New York Times and Google, allowing for a different way to interact with and process the news</p>
+          </div>
+          <div class="right-desc">
+            <h3 class="proj-tech-title">Technologies</h3>
+            <ul class="proj-tech">
+              <li>Swift</li>
+              <li>New York Times API</li>
+              <li>Google Maps API</li>
+              <li>Google Geocode API</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="proj-container-home">
+        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/wwc_still.png" alt="still of project video"/>  
+        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/wwc_1.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="proj-desc">
+          <div class="left-desc">
+            <h3 class="proj-title-home">Write Write Cross</h3>
+            <div class="proj-subtitles">
+              <a class="proj-link" href="https://github.com/caroham/write_write_cross_game" target="_blank"><p>github</p></a>
+              <p class="proj-date">2018 (in progress)</p>
+            </div>
+            <p class="proj-desc-home">A collaborative writing game where everyone loses (just kidding). Users take turns writing and crossing out words. For every two words written, one must be crossed out. A frustrating but interesting writing experience.</p>
+          </div>
+          <div class="right-desc">
+            <h3 class="proj-tech-title">Technologies</h3>
+            <ul class="proj-tech">
+              <li>Python</li>
+              <li>Django</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="panel-design">
+    <div class="tab-design tab" (click)="toggleExpandedState()">
+        <h2>Design</h2>
+    </div>
+    <div class="container-design">
+      <div class="proj-container-home">
+        <img class="img-home-mult mobile-tall" *ngIf="!signal_main" src="./assets/signal_1_still.png" alt="Explorer gif 2" (click)="signal_main = !signal_main">
+        <img class="img-home-mult mobile-tall" *ngIf="signal_main" src="./assets/signal_1_crop.gif" alt="Explorer gif 2" (click)="signal_main = !signal_main">
+        <img class="img-home-mult mobile-tall" *ngIf="!signal_load" src="./assets/signal_loading_still.png" alt="Explorer gif 2" (click)="signal_load = !signal_load">
+        <img class="img-home-mult mobile-tall" *ngIf="signal_load" src="./assets/signal_loading_crop.gif" alt="Explorer gif 2" (click)="signal_load = !signal_load">
+        <div class="proj-desc">
+          <div class="left-desc">
+            <h3 class="proj-title-home">Dolphin/Signal App Startup</h3>
+            <div class="proj-subtitles">
+                <p class="proj-link">2017</p>
+            </div>
+            <p class="proj-desc-home">A mobile app that reminds users to reach out to contacts who they haven't talked to in a while. The reminders are based on how frequently a user normally talks with their contacts, and notifies users when they fall out of their normal communication cycle. A beta version of the app was formerly on the Google Play store but since has been taken off.</p>
+          </div>
+          <div class="right-desc">
+            <ul class="proj-tech">
+              <li>
+                <h3 class="proj-credit-title">Company</h3>
+                <p class="proj-credits">ABC Design Lab (internal start-up)</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">Creative Director</h3>
+                <p class="proj-credits">Adam Chaloiecheep</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">Logo Designer</h3>
+                <p class="proj-credits">Andrew Boudreaux</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">Production Designer</h3>
+                <p class="proj-credits">Liz Liu</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">My Role</h3>
+                <p class="proj-credits">UX/Graphic Designer</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="proj-container-home">
+          <img class="img-home-mult mobile-tall" *ngIf="!amnh_zoom" src="./assets/amnh_mapzoom_still.png" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
+        <img class="img-home-mult mobile-tall" *ngIf="amnh_zoom" src="./assets/amnh_mapzoom_crop.gif" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile && !amnh_scroll" src="./assets/amnh_scroll_still.png" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile && amnh_scroll" src="./assets/amnh_scroll_short.gif" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
+        <div class="proj-desc">
+          <div class="left-desc">
+            <h3 class="proj-title-home">AMNH Explorer App</h3>
+            <div class="proj-subtitles">
+                <a class="proj-link" href="https://www.amnh.org/apps/explorer" target="_blank"><p>website</p></a>
+                <p class="proj-date">2015</p>
+            </div>
+            <p class="proj-desc-home">A mobile app for the American Museum of Natural History. Users select their interests then get a curated list of exhibits to visit. When users neared an exhibit on their list, they would get a push notification. There was also an educational AR game in the app in which users would get hints to visit certain dioramas to collect badges.</p>
+          </div>
+          <div class="right-desc">
+            <ul class="proj-tech">
+              <li>
+                <h3 class="proj-credit-title">Client</h3>
+                <p class="proj-credits">American Museum of Natural History</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">Company</h3>
+                <p class="proj-credits">Local Projects</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">Creative Director</h3>
+                <p class="proj-credits">John Ryan</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">Art Directors</h3>
+                <p class="proj-credits">Erika Tarte, Kim Gim</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">UX Designers</h3>
+                <p class="proj-credits">Mateo Salazar, Edward Blake</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">Other Graphic Designers</h3>
+                <p class="proj-credits">Laura Huaranga, Yooin Cho</p>
+              </li>
+              <li>
+                <h3 class="proj-credit-title">My Role</h3>
+                <p class="proj-credits">Graphic Designer</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="proj-container-home">
+        <img class="img-home-mult mobile-tall img-pad" src="./assets/thesis_zoomed-out_color.jpg" alt="thesis 1">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/thesis_detail_640_crop.jpg" alt="thesis 2">
+        <div class="proj-desc">
+          <div class="left-desc">
+            <h3 class="proj-title-home">The Language of Language</h3>
+            <div class="proj-subtitles">
+                <p class="proj-link">2014</p>
+            </div>
+            <p class="proj-desc-home">An installation for my Senior Thesis project exploring linguistic relativity, or the relationship between a person's native language and how that shapes the way that they percieve the world.</p>
+          </div>
+          <div class="right-desc">
+            <ul class="proj-tech">
+              <!-- <li>
+                <h3 class="proj-credit-title">Title</h3>
+                <p class="proj-credits">Desc</p>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
