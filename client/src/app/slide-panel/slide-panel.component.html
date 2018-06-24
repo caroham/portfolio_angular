@@ -1,7 +1,7 @@
 <div id="container-panels">
   <div id="panel-dev" [@panelExpandTrigger]="expandedState">
-    <div class="tab-dev tab" (click)="toggleExpandedState()">
-      <h2>Code</h2>
+    <div class="tab-dev tab" [ngClass]="{ sticky : !mobile && scrollPos }" (click)="toggleExpandedState()">
+      <h2 class="tab-text" >Code</h2>
     </div>
     <div class="container-dev" *ngIf="expanded" [@visibleTrigger]="'visible'">
       <div class="proj-container-home">
@@ -86,8 +86,8 @@
     </div>
   </div>
   <div id="panel-design">
-    <div class="tab-design tab" (click)="toggleExpandedState()">
-        <h2>Design</h2>
+    <div class="tab-design tab" [ngClass]="{ sticky : !mobile && scrollPos }" (click)="toggleExpandedState()">
+        <h2 class="tab-text">Design</h2>
     </div>
     <div class="container-design">
       <div class="proj-container-home">

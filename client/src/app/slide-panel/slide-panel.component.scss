@@ -77,6 +77,11 @@
     padding-bottom: 4px;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+    width: auto;
+}
 
 @media only screen and (max-width: 480px){
     #panel-dev, #panel-design {
@@ -115,6 +120,10 @@
         display: grid;
         grid-template-rows: 30px auto;
         grid-template-columns: 60px 30px 1fr 90px 60px;
+    }
+
+    .tab-text {
+        position: relative;
     }
 
     .tab-dev, .tab-design {

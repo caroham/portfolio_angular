@@ -50,13 +50,13 @@ export class SlidePanelComponent implements OnInit {
   expanded = true;
   expandedState = "expanded";
   mobile = false;
+  scrollPos = false;
 
   signal_main=false;
   signal_load=false;
 
   amnh_scroll=false;
   amnh_zoom=false;
-
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -69,6 +69,16 @@ export class SlidePanelComponent implements OnInit {
     if(window.innerWidth > 480){
       this.mobile = false;
       this._httpService.mobile=false;
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onscroll(event) {
+    if (!this.mobile && window.pageYOffset > 80) {
+      console.log(event);
+      this.scrollPos = true;
+    } else {
+      this.scrollPos = false;
     }
   }
 

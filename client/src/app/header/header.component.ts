@@ -21,7 +21,7 @@ import {Subscription} from "rxjs/Rx";
   styleUrls: ['./header.component.scss'],
   animations: [
     trigger('navExpandTrigger', [
-      state('navExpanded', style({height: '700px'})),
+      state('navExpanded', style({ 'min-height': '700px', 'padding-bottom': '20px'})),
       state('navCollapsed', style({height: '80px'})),
       transition('navCollapsed => navExpanded', animate('600ms 200ms ease-in')),
       transition('navExpanded => navCollapsed', animate('600ms 200ms ease-out')),
@@ -66,8 +66,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private _httpService: HttpService,
-    // private _route: ActivatedRoute,
-    // private _router: Router
   ) { }
 
   ngOnInit() {
