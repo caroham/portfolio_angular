@@ -52,12 +52,6 @@ export class SlidePanelComponent implements OnInit {
   mobile = false;
   scrollPos = false;
 
-  signal_main=false;
-  signal_load=false;
-
-  amnh_scroll=false;
-  amnh_zoom=false;
-
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if(window.innerWidth < 480){

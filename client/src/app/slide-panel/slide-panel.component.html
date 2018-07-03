@@ -94,10 +94,18 @@
     <div class="container-design">
       <div class="proj-container-home">
         <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/signal_banner_3.png" alt="Signal Mockup">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!signal_main" src="./assets/signal_1_still.png" alt="Signal gif 1" (click)="signal_main = !signal_main">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="signal_main" src="./assets/signal_1_crop.gif" alt="Signal gif 1" (click)="signal_main = !signal_main">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!signal_load && !mobile" src="./assets/signal_loading_still.png" alt="Signal gif 2" (click)="signal_load = !signal_load">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="signal_load && !mobile" src="./assets/signal_loading_crop.gif" alt="Signal gif 2" (click)="signal_load = !signal_load">
+
+        <img  *ngIf="mobile" class="img-home-mult mobile-tall mult-vid" src="./assets/signal_1_still.png" alt="still of project video"/>  
+        <video *ngIf="!mobile" loop muted class="img-home-mult mobile-tall mult-vid" onClick="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/signal_bg.mp4">
+          Your browser does not support the video tag.
+        </video>  
+
+        <img  *ngIf="mobile" class="img-home-mult mobile-tall mult-vid" src="./assets/signal_loading_still.png" alt="still of project video"/>  
+        <video *ngIf="!mobile" loop muted class="img-home-mult mobile-tall mult-vid" onClick="this.paused ? this.play() : this.pause();">
+          <source type="video/mp4" src="./assets/signal_loading_bg.mp4">
+          Your browser does not support the video tag.
+        </video>  
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Dolphin/Signal App Startup</h3>
@@ -133,11 +141,20 @@
         </div>
       </div>
       <div class="proj-container-home">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!amnh_zoom" src="./assets/amnh_mapzoom_still.png" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="amnh_zoom" src="./assets/amnh_mapzoom_crop.gif" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!mobile && !amnh_scroll" src="./assets/amnh_scroll_still.png" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
-        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!mobile && amnh_scroll" src="./assets/amnh_scroll_short.gif" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
-        <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/amnh_avatour_still.png" alt="Explorer still">
+          <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/amnh_avatour_still.png" alt="Explorer still">
+
+          <img  *ngIf="mobile" class="img-home-mult mobile-tall mult-vid" src="./assets/amnh_mapzoom_still.png" alt="still of project video"/>  
+          <video *ngIf="!mobile" loop muted class="img-home-mult mobile-tall mult-vid" onClick="this.paused ? this.play() : this.pause();">
+            <source type="video/mp4" src="./assets/amnh_mapzoom_bg.mp4">
+            Your browser does not support the video tag.
+          </video>  
+  
+          <img  *ngIf="mobile" class="img-home-mult mobile-tall mult-vid" src="./assets/amnh_scroll_still.png" alt="still of project video"/>  
+          <video *ngIf="!mobile" loop muted class="img-home-mult mobile-tall mult-vid" onClick="this.paused ? this.play() : this.pause();">
+            <source type="video/mp4" src="./assets/amnh_scroll_bg.mp4">
+            Your browser does not support the video tag.
+          </video>  
+
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">AMNH Explorer App</h3>
