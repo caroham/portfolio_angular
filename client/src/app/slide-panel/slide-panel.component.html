@@ -141,7 +141,6 @@
         </div>
       </div>
       <div class="proj-container-home">
-          <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/amnh_avatour_still.png" alt="Explorer still">
 
           <img  *ngIf="mobile" class="img-home-mult mobile-tall mult-vid" src="./assets/amnh_mapzoom_still.png" alt="still of project video"/>  
           <video *ngIf="!mobile" loop muted class="img-home-mult mobile-tall mult-vid" onClick="this.paused ? this.play() : this.pause();">
@@ -151,9 +150,11 @@
   
           <img  *ngIf="mobile" class="img-home-mult mobile-tall mult-vid" src="./assets/amnh_scroll_still.png" alt="still of project video"/>  
           <video *ngIf="!mobile" loop muted class="img-home-mult mobile-tall mult-vid" onClick="this.paused ? this.play() : this.pause();">
-            <source type="video/mp4" src="./assets/amnh_scroll_bg.mp4">
+            <source type="video/mp4" src="./assets/amnh_scroll_crop.mp4">
             Your browser does not support the video tag.
           </video>  
+
+          <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/amnh_avatour_still.png" alt="Explorer still">
 
         <div class="proj-desc">
           <div class="left-desc">
