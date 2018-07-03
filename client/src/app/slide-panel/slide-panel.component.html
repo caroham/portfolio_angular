@@ -5,7 +5,7 @@
     </div>
     <div class="container-dev" *ngIf="expanded" [@visibleTrigger]="'visible'">
       <div class="proj-container-home">
-        <!-- <img class="img-home-single" src="./assets/cc_3_crop.gif" alt="Communal Canvas gif"> -->
+        <a id="communal_canvas" class="anchor"></a>
         <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/cc_still.png" alt="still of project video"/>  
         <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/cc_3_crop.mp4">
@@ -33,7 +33,8 @@
         </div>
       </div>
       <div class="proj-container-home">
-        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/map_still.png" alt="still of project video"/>  
+        <a id="map_news" class="anchor"></a>
+        <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/map_still_2.png" alt="still of project video"/>  
         <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/map_mockup_crop.mp4">
           Your browser does not support the video tag.
@@ -45,7 +46,7 @@
               <a class="proj-link" href="https://github.com/caroham/news_map" target="_blank"><p>github</p></a>
               <p class="proj-date">2018 (in progress)</p>
             </div>
-            <p class="proj-desc-home">An iOS app that plots the top 10 World News Stories on a map, using API's from The New York Times and Google, allowing for a different way to interact with and process the news</p>
+            <p class="proj-desc-home">An iOS app that plots the top 10 World News Stories on a map, using API's from The New York Times and Google, allowing for a different way to interact with and process the news.</p>
           </div>
           <div class="right-desc">
             <h3 class="proj-tech-title">Technologies</h3>
@@ -59,6 +60,7 @@
         </div>
       </div>
       <div class="proj-container-home">
+        <a id="write_cross" class="anchor"></a>
         <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/wwc_still.png" alt="still of project video"/>  
         <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/wwc_1.mp4">
@@ -91,10 +93,11 @@
     </div>
     <div class="container-design">
       <div class="proj-container-home">
-        <img class="img-home-mult mobile-tall" *ngIf="!signal_main" src="./assets/signal_1_still.png" alt="Explorer gif 2" (click)="signal_main = !signal_main">
-        <img class="img-home-mult mobile-tall" *ngIf="signal_main" src="./assets/signal_1_crop.gif" alt="Explorer gif 2" (click)="signal_main = !signal_main">
-        <img class="img-home-mult mobile-tall" *ngIf="!signal_load" src="./assets/signal_loading_still.png" alt="Explorer gif 2" (click)="signal_load = !signal_load">
-        <img class="img-home-mult mobile-tall" *ngIf="signal_load" src="./assets/signal_loading_crop.gif" alt="Explorer gif 2" (click)="signal_load = !signal_load">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/signal_banner_3.png" alt="Signal Mockup">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!signal_main" src="./assets/signal_1_still.png" alt="Signal gif 1" (click)="signal_main = !signal_main">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="signal_main" src="./assets/signal_1_crop.gif" alt="Signal gif 1" (click)="signal_main = !signal_main">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!signal_load && !mobile" src="./assets/signal_loading_still.png" alt="Signal gif 2" (click)="signal_load = !signal_load">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="signal_load && !mobile" src="./assets/signal_loading_crop.gif" alt="Signal gif 2" (click)="signal_load = !signal_load">
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">Dolphin/Signal App Startup</h3>
@@ -130,10 +133,11 @@
         </div>
       </div>
       <div class="proj-container-home">
-          <img class="img-home-mult mobile-tall" *ngIf="!amnh_zoom" src="./assets/amnh_mapzoom_still.png" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
-        <img class="img-home-mult mobile-tall" *ngIf="amnh_zoom" src="./assets/amnh_mapzoom_crop.gif" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
-        <img class="img-home-mult mobile-tall" *ngIf="!mobile && !amnh_scroll" src="./assets/amnh_scroll_still.png" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
-        <img class="img-home-mult mobile-tall" *ngIf="!mobile && amnh_scroll" src="./assets/amnh_scroll_short.gif" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!amnh_zoom" src="./assets/amnh_mapzoom_still.png" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="amnh_zoom" src="./assets/amnh_mapzoom_crop.gif" alt="Explorer gif 2" (click)="amnh_zoom = !amnh_zoom">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!mobile && !amnh_scroll" src="./assets/amnh_scroll_still.png" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
+        <img class="img-home-mult mobile-tall mult-vid" *ngIf="!mobile && amnh_scroll" src="./assets/amnh_scroll_short.gif" alt="Explorer gif 2" (click)="amnh_scroll = !amnh_scroll">
+        <img class="img-home-mult mobile-tall" *ngIf="!mobile" src="./assets/amnh_avatour_still.png" alt="Explorer still">
         <div class="proj-desc">
           <div class="left-desc">
             <h3 class="proj-title-home">AMNH Explorer App</h3>
