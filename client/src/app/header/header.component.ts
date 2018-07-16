@@ -48,8 +48,8 @@ import {Subscription} from "rxjs/Rx";
   ]
 })
 export class HeaderComponent implements OnInit {   
-  navState = "navCollapsed";
-  navExpanded = false;
+  navState = "navExpanded";
+  navExpanded = true;
   mobile=false;
 
   @HostListener('window:resize', ['$event'])
