@@ -21,7 +21,7 @@ import {Subscription} from "rxjs/Rx";
   styleUrls: ['./header.component.scss'],
   animations: [
     trigger('navExpandTrigger', [
-      state('navExpanded', style({ 'min-height': '700px', 'padding-bottom': '20px'})),
+      state('navExpanded', style({ 'min-height': '760px', 'padding-bottom': '20px'})),
       state('navCollapsed', style({height: '80px'})),
       transition('navCollapsed => navExpanded', animate('600ms 200ms ease-in')),
       transition('navExpanded => navCollapsed', animate('600ms 200ms ease-out')),
@@ -51,16 +51,21 @@ export class HeaderComponent implements OnInit {
   navState = "navCollapsed";
   navExpanded = false;
   mobile=false;
+  mobileHeight = '800px';
+  lgHeight = '700px';
+  height = this.lgHeight;
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if(window.innerWidth < 480){
       this.mobile = true;
       this._httpService.mobile=true;
+      this.height = this.mobileHeight;
     }
     if(window.innerWidth > 480){
       this.mobile = false;
       this._httpService.mobile=false;
+      this.height = this.lgHeight;
     }
   }
 
@@ -74,8 +79,10 @@ export class HeaderComponent implements OnInit {
   toggleNavState(){
     if(this._httpService.mobile) {
       this.mobile = true;
+      this.height = this.mobileHeight;
     } else {
       this.mobile=false;
+      this.height = this.lgHeight;
     }
     this.navState = this.navExpanded ? 'navCollapsed' : 'navExpanded';
     this.navExpanded = !this.navExpanded;
