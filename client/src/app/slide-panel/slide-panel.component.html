@@ -7,7 +7,7 @@
       <div class="proj-container-home">
         <a id="communal_canvas" class="anchor"></a>
         <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/cc_still.png" alt="still of project video"/>  
-        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+        <video *ngIf="!mobile" loop muted poster="./assets/cc_still.png" class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/cc_3_crop.mp4">
           Your browser does not support the video tag.
         </video>        
@@ -26,7 +26,7 @@
               <li>Angular</li>
               <li>Socket.io</li>
               <li>Node.js</li>
-              <li>Express</li>
+              <li>Express</li>  
               <li>MongoDB</li>
             </ul>
           </div>
@@ -35,7 +35,7 @@
       <div class="proj-container-home">
         <a id="map_news" class="anchor"></a>
         <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/map_still_2.png" alt="still of project video"/>  
-        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+        <video *ngIf="!mobile" loop muted poster="./assets/map_still_2.png" class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/map_mockup_crop.mp4">
           Your browser does not support the video tag.
         </video>  
@@ -62,7 +62,7 @@
       <div class="proj-container-home">
         <a id="write_cross" class="anchor"></a>
         <img  *ngIf="mobile" class="img-home-single home-vid" src="./assets/wwc_still.png" alt="still of project video"/>  
-        <video *ngIf="!mobile" loop muted class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
+        <video *ngIf="!mobile" loop muted poster="./assets/wwc_still.png" class="img-home-single home-vid" onClick="this.paused ? this.play() : this.pause();">
           <source type="video/mp4" src="./assets/wwc_1.mp4">
           Your browser does not support the video tag.
         </video>
